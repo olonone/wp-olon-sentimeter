@@ -1,0 +1,26 @@
+{
+  "name": "WordPress Dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "shutdownAction": "stopCompose",
+  "runServices": ["db"],
+  "forwardPorts": [8080],
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "remoteEnv": {
+    "MYSQL_ROOT_PASSWORD": "example",
+    "MYSQL_DATABASE": "wordpress",
+    "MYSQL_USER": "wp",
+    "MYSQL_PASSWORD": "wp"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/php:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/composer:1": {}
+  },
+  "extensions": [
+    "bmewburn.vscode-intelephense-client",
+    "felixfbecker.php-debug",
+    "esbenp.prettier-vscode"
+  ]
+}
