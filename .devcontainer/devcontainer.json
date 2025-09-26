@@ -18,9 +18,13 @@
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/composer:1": {}
   },
-  "extensions": [
-    "bmewburn.vscode-intelephense-client",
-    "felixfbecker.php-debug",
-    "esbenp.prettier-vscode"
-  ]
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "felixfbecker.php-debug",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
 }
